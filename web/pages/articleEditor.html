@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+      maxium-scale=1.0, user-scalable=no">
+
+  <script src="base/frame/jquery.min.js"></script>
+
+  <!-- 由于要在文档就绪之前判断cookie，所以这里需要先加载这两个js -->
+  <script src="base/tool/jquery-cookie/jquery.cookie.js"></script>
+  <script src="js/articleEditor.js"></script>
+
+  <link href="base/frame/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="base/theme/cerulean.bootstrap.min.css" rel="stylesheet">
+  <script src="base/frame/bootstrap/js/bootstrap.min.js"></script>
+
+  <link href="base/widget/redactor/redactor.css" rel="stylesheet">
+  <script src="base/widget/redactor/redactor.min.js"></script>
+  <script src="base/widget/redactor/zh_cn.js"></script>
+  <script src="base/widget/redactor/imagemanager.js"></script>
+
+  <link href="css/global.css" rel="stylesheet">
+
+  <script src="base/widget/bootbox/bootbox.min.js"></script>
+
+  <script src="js/nav.js"></script>
+  <link href="css/articleEditor.css" rel="stylesheet">
+
+  <title>编辑文章</title>
+</head>
+<body>
+  <nav id="navContainer"></nav>
+  <div class="container">
+    <label class="hidden" id="articleEditor-id"></label>
+    <label class="articleEditor-label" for="articleEditor-title">文章标题</label>
+    <input class="form-control" id="articleEditor-title" type="text">
+    <br>
+    <label class="articleEditor-label" for="articleEditor-contentContainer">文章内容</label>
+    <textarea id="articleEditor-contentContainer"></textarea>
+    <button class="btn btn-primary" onclick="saveArticle()">保&nbsp;&nbsp;存</button>
+  </div>
+</body>
+</html>

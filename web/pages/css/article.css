@@ -1,0 +1,40 @@
+
+@media (min-width: 768px) {
+  #article-content {
+    font-size: 18px;
+    text-align: justify;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  #article-content {
+    font-size: 14px;
+    text-align: justify;
+  }
+  #article-title {
+    font-size: 25px;
+  }
+}
+
+/* bootbox样式设置  begin */
+.bootboxFont {
+  font-size: 18px;
+  font-weight: 600;
+}
+.bootboxPosition {
+  padding-top: 115px;
+}
+/* bootbox样式设置  end */
+
+/* 编辑工具条样式设置 begin */
+.lh30 {
+  line-height: 30px;
+}
+#editToolbar {
+  position:fixed;
+  right: 0px;
+  top: 150px;
+  opacity: 0.8;
+}
+/* 编辑工具条样式设置 end */

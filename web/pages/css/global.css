@@ -1,0 +1,11 @@
+body {
+  background-color: #e5e5e5;
+  padding-top: 60px;
+}
+
+/*将1200px的container设置为与992px的一样*/
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}

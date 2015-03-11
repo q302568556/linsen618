@@ -1,0 +1,19 @@
+
+.articleEditor-label {
+ font-size: 14px;
+}
+
+.pdr2 {
+  padding-right: 2px;
+}
+
+/* bootbox样式设置  begin */
+.bootboxFont {
+  font-size: 18px;
+  font-weight: 600;
+}
+.bootboxPosition {
+  padding-top: 115px;
+  z-index: 1500; /*针对redactor编辑框的头部*/
+}
+/* bootbox样式设置  end */

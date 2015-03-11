@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+      maximum-scale=1.0, user-scalable=no">
+
+  <script src="base/frame/jquery.min.js"></script>
+
+  <link href="base/frame/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="base/theme/cerulean.bootstrap.min.css" rel="stylesheet">
+  <script src="base/frame/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="base/tool/jquery-cookie/jquery.cookie.js"></script>
+  <script src="base/tool/md5.min.js"></script>
+
+  <link href="css/global.css" rel="stylesheet">
+
+  <script src="js/nav.js"></script>
+
+  <script src="js/login.js"></script>
+
+  <title>登录</title>
+</head>
+<body>
+  <nav id="navContainer"></nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5 col-md-4 col-lg-4
+                  col-sm-offset-3 col-md-offset-4 col-lg-offset-4">
+        <form id="login" role="form">
+          <div class="form-group">
+            <small class="alert alert-danger hidden" id="login-errorMsg"></small>
+          </div>
+          <div class="form-group">
+            <label for="login-username">用户名</label>
+            <input class="form-control" id="login-username" name="loginusername" type="text">
+          </div>
+          <div class="form-group">
+            <label for="login-userpwd">密&nbsp;码</label>
+            <input class="form-control" id="login-userpwd" name="loginuserpwd" type="password" >
+          </div>
+          <button class="btn btn-primary pull-right" id="login-signIn" type="button">登&nbsp;&nbsp;录</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+      maximum-scale=1.0, user-scalable=no">
+
+  <script src="base/frame/jquery.min.js"></script>
+
+  <link href="base/frame/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="base/theme/cerulean.bootstrap.min.css" rel="stylesheet">
+  <script src="base/frame/bootstrap/js/bootstrap.min.js"></script>
+
+  <link href="css/global.css" rel="stylesheet">
+
+  <link href="base/widget/toolbar/jquery.toolbars-modified.css" rel="stylesheet">
+  <script src="base/widget/toolbar/jquery.toolbar.js"></script>
+
+  <script src="base/widget/bootbox/bootbox.min.js"></script>
+
+  <script src="base/tool/jquery-cookie/jquery.cookie.js"></script>
+
+  <script src="js/nav.js"></script>
+  <link href="css/article.css" rel="stylesheet">
+  <script src="js/article.js"></script>
+
+  <title></title>
+</head>
+<body>
+  <nav id="navContainer"></nav>
+  <div class="container">
+    <article id="article">
+      <h2 id="article-id" class="hidden"></h2>
+      <h2 id="article-title"></h2>
+      <pre id="article-content"></pre>
+    </article>
+  </div>
+  <!-- 编辑工具条 -->
+  <button class="btn btn-primary btn-sm glyphicon glyphicon-pencil hidden"
+          id="editToolbar" type="button">
+  </button>
+  <div class="hidden" id="editToolbar-options">
+    <a id="editToolbar-option-add" data-toggle="tooltip" title="新增">
+      <i class="glyphicon glyphicon-plus lh30"></i>
+    </a>
+    <a id="editToolbar-option-update" data-toggle="tooltip" title="修改">
+      <i class="glyphicon glyphicon-edit lh30"></i>
+    </a>
+    <a id="editToolbar-option-delete" data-toggle="tooltip" title="删除">
+      <i class="glyphicon glyphicon-trash lh30"></i>
+    </a>
+  </div>
+</body>
+</html>

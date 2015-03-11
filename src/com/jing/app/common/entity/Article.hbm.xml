@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+  <class name="com.jing.app.common.entity.Article" table="ARTICLE" schema="LINSEN618">
+    <id name="articleid">
+      <column name="ARTICLEID" not-null="true"/>
+      <generator class="uuid"/>
+    </id>
+    <property name="articletitle">
+      <column name="ARTICLETITLE"/>
+    </property>
+    <property name="articlecontent">
+      <column name="ARTICLECONTENT" sql-type="clob"/>
+    </property>
+    <property name="articledate">
+      <column name="ARTICLEDATE"/>
+    </property>
+  </class>
+</hibernate-mapping>

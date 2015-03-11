@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-autowire="byName">
+	<!-- 定义一个articlelist业务逻辑组件，自动装配 -->
+	<bean id="articleListService" class="com.jing.app.articlelist.service.impl.ArticleListServiceImpl"/>
+	<!-- 定义一个articlelist DAO组件，自动装配 -->
+	<bean id="articleListDao" class="com.jing.app.articlelist.dao.impl.ArticleListDaoImpl"/>
+
+  <!-- 定义一个article业务逻辑组件，自动装配 -->
+  <bean id="articleService" class="com.jing.app.article.service.impl.ArticleServiceImpl"/>
+  <!-- 定义一个article DAO组件，自动装配 -->
+  <bean id="articleDao" class="com.jing.app.article.dao.impl.ArticleDaoImpl"/>
+
+  <!-- 定义一个login业务逻辑组件，自动装配 -->
+  <bean id="loginService" class="com.jing.app.login.service.impl.LoginServiceImpl"/>
+  <!-- 定义一个login DAO组件，自动装配 -->
+  <bean id="loginDao" class="com.jing.app.login.dao.impl.LoginDaoImpl"/>
+</beans>

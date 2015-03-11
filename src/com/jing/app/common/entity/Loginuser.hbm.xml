@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+  <class name="com.jing.app.common.entity.Loginuser" table="LOGINUSER" schema="LINSEN618">
+    <id name="loginuserid">
+      <column name="LOGINUSERID" not-null="true"/>
+    </id>
+    <property name="loginusername">
+      <column name="LOGINUSERNAME"/>
+    </property>
+    <property name="loginuserpwd">
+      <column name="LOGINUSERPWD"/>
+    </property>
+  </class>
+</hibernate-mapping>

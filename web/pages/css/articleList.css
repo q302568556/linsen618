@@ -1,0 +1,42 @@
+/*!
+ * 文档用途：articleList插件css
+ */
+
+.articleList-article-title {
+  display: inline-block;
+}
+
+h3.articleList-article-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.articleList-article-summary {
+  font-size: 14px;
+  height: 100px;
+  overflow: hidden;
+  line-height: 28px;
+}
+
+.articleList-article-summary p {
+  margin: 0px;
+}
+
+.articleList-article-summary:hover {
+  border: 1px solid #999999;
+  cursor: pointer;
+}
+
+.articleList-article-date {
+  color: dimgrey;
+  font-size: 10px;
+  padding-left: 20px;
+}
+
+.pdr2 {
+  padding-right: 2px;
+}
+
+.pdl2 {
+  padding-left: 2px;
+}

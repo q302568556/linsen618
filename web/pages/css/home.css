@@ -1,0 +1,19 @@
+
+/*datepicker控件css重写 begin*/
+.datepicker {
+  border: 2px solid #c0c0c0;
+}
+/*datepicker控件css重写 end*/
+
+
+/* 编辑工具条样式设置 begin */
+.lh30 {
+  line-height: 30px;
+}
+#editToolbar {
+  position:fixed;
+  right: 0px;
+  top: 150px;
+  opacity: 0.8;
+}
+/* 编辑工具条样式设置 end */

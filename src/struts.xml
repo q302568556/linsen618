@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+  <!-- 是否开发模式 -->
+  <constant name="struts.devMode" value="true"></constant>
+  <!-- 指定临时文件夹 -->
+  <constant name="struts.multipart.saveDir" value="F:\linsen618temp"></constant>
+
+  <!-- 所有的Action定义都应该放在package下 -->
+  <package name="jing" extends="json-default">
+    <!-- 定义拦截器 -->
+    <interceptors>
+      <!-- 异常拦截器 -->
+      <interceptor name="exceptionInterceptor" class="com.jing.app.common.interceptor.ExceptionInterceptor"/>
+      <!-- 默认拦截器栈，包含default-stack拦截器栈（struts-default.xml的默认拦截器栈） -->
+      <interceptor-stack name="defaultInterceptorStack">
+        <interceptor-ref name="defaultStack"/>
+        <interceptor-ref name="exceptionInterceptor"/>
+      </interceptor-stack>
+    </interceptors>
+    <!-- 定义默认拦截器 -->
+    <default-interceptor-ref name="defaultInterceptorStack"/>
+
+    <!-- 定义全局结果映射 -->
+    <global-results>
+      <result type="json">
+        <param name="noCache">true</param>
+        <param name="contentType">text/html</param>
+      </result>
+      <result name="ajaxException" type="json">
+        <param name="root">returnResult</param>
+      </result>
+      <result name="exception">/pages/exception.html</result>
+    </global-results>
+
+    <!-- 定义action -->
+    <!-- 文章列表action -->
+    <action name="articleList_*"
+            class="com.jing.app.articlelist.action.ArticleListAction"
+            method="{1}">
+    </action>
+    <!-- 文章action -->
+    <action name="article_*"
+            class="com.jing.app.article.action.ArticleAction"
+            method="{1}">
+      <!-- 动态设置action的属性值 -->
+      <param name="filelink">/pages/img/articleimg</param>
+    </action>
+    <!-- 登录action -->
+    <action name="login_*"
+            class="com.jing.app.login.action.LoginAction"
+            method="{1}">
+    </action>
+  </package>
+</struts>

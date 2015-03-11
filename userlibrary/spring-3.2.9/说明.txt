@@ -1,0 +1,4 @@
+aop“¿¿µ∞¸£∫
+aopalliance.jar£∫http://sourceforge.net/projects/aopalliance/
+aspectjrt.jar£∫http://www.eclipse.org/downloads/download.php?file=/tools/aspectj/aspectj-1.8.4.jar
+aspectjweaver.jar£∫

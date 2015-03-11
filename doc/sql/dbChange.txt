@@ -1,0 +1,18 @@
+Oracle：
+		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:ORCL"></property>
+		<property name="user" value="linsen618"></property>
+		<property name="password" value="linsen618"></property>
+
+
+MySQL：
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/linsen618"></property>
+		<property name="user" value="linsen618"></property>
+		<property name="password" value="linsen618"></property>
+
+
+注意：
+1.如果连接oracle，映射文件*.hbm.xml中类型为clob的字段（目前只有article和vw_articlelist中有）需要指明sql_type，
+如果连接mysql则不用设置。
+2.DAO层的hql需要进行检查和替换，目前暂时不用。
