@@ -10,11 +10,11 @@ public interface ArticleService {
   public Article queryArticle(String articleid);
 
   //新增文章
-  public void addArticle(Article article);
+  public void addArticle(Article article, String filelink, String articleimgPath);
 
   //修改文章
-  public void updateArticle(Article article);
+  public void updateArticle(Article article, String filelink, String articleimgPath);
 
   //删除文章
-  public void deleteArticle(String articleid);
+  public void deleteArticle(String articleid, String articleimgPath);
 }

@@ -61,16 +61,24 @@ public class ArticleAction extends ActionSupport {
     this.fileContentType = fileContentType;
   }
 
-  //直接在struts.xml文件中配置的属性：文件保存路径，与redactor.js中的变量名对应
+  //直接在struts.xml文件中配置的属性：文章图片临时保存路径，与redactor.js中的变量名对应
   private String filelink;
-  //接收struts.xml文件配置值的方法：设置文件保存路径
+  //接收struts.xml文件配置值的方法：设置文章图片临时保存路径
   public void setFilelink(String filelink) {
     this.filelink = filelink;
   }
-  //返回文件保存路径:文件路径+文件名
+  //返回文章图片临时保存路径:文件路径+文件名
   public String getFilelink() {
     return filelink;
   }
+
+  //直接在struts.xml文件中配置的属性：文章图片正式保存路径，用于将文章图片从临时保存路径拷贝到正式保存路径
+  private String articleimgPath;
+  //接收struts.xml文件配置值的方法：设置文章图片正式保存路径
+  public void setArticleimgPath(String articleimgPath) {
+    this.articleimgPath = articleimgPath;
+  }
+
   /* --------------------------------图片上传相关属性 end------------------------------------- */
 
   //处理请求：查询文章
@@ -83,21 +91,21 @@ public class ArticleAction extends ActionSupport {
   //处理请求：新增文章
   public String addArticle() throws Exception {
     //调用业务逻辑组件
-    articleService.addArticle(article);
+    articleService.addArticle(article, filelink, articleimgPath);
     return SUCCESS;
   }
 
   //处理请求：修改文章
   public String updateArticle() throws Exception {
     //调用业务逻辑组件
-    articleService.updateArticle(article);
+    articleService.updateArticle(article, filelink, articleimgPath);
     return SUCCESS;
   }
 
   //处理请求：删除文章
   public String deleteArticle() throws Exception {
     //调用业务逻辑组件
-    articleService.deleteArticle(articleid);
+    articleService.deleteArticle(articleid, articleimgPath);
     return SUCCESS;
   }
 
@@ -118,6 +126,8 @@ public class ArticleAction extends ActionSupport {
     while((len=fileInputStream.read(buffer))>0) {
       fileOutputStream.write(buffer, 0, len);
     }
+    fileOutputStream.close();
+    fileInputStream.close();
     return SUCCESS;
   }
 }

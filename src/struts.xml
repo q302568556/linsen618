@@ -46,7 +46,8 @@
             class="com.jing.app.article.action.ArticleAction"
             method="{1}">
       <!-- 动态设置action的属性值 -->
-      <param name="filelink">/pages/img/articleimg</param>
+      <param name="filelink">/pages/img/temp</param>
+      <param name="articleimgPath">/pages/img/articleimg</param>
     </action>
     <!-- 登录action -->
     <action name="login_*"

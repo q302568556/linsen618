@@ -1,3 +1,5 @@
 1.缓存目录配置（struts.xml）：F:\linsen618temp
-2.文章图片配置（struts.xml）：/pages/img/articleimg（空文件夹不会自动部署过去，所以在该文件夹放入一张初始图片）
+2.文章图片配置（struts.xml）：
+  临时文件夹：/pages/img/temp（空文件夹不会自动部署过去，所以在该文件夹放入一张初始图片）
+  正式文件夹：/pages/img/articleimg（空文件夹不会自动部署过去，所以在该文件夹放入一张初始图片）
 3.redactor的imagemanager.js插件主要用于图片弹出窗的choose页，即imageManagerJson属性。
