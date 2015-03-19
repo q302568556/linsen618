@@ -23,6 +23,9 @@ function loadNav(navContainer, pageName) {
   if("articleEditor" == pageName) { //文章编辑
     findActiveTarget(navbarMain, "1");
   }
+  if("appList" == pageName) { //应用列表
+    findActiveTarget(navbarMain, "2");
+  }
   //判断是否登录，如果已登录，显示退出按钮
   var loginuserCookie = $.cookie("loginuserCookie");
   if(loginuserCookie) {
@@ -101,17 +104,7 @@ function navTemplate() {
   template += '      <div class="collapse navbar-collapse" id="navbar-main">            ';
   template += '        <ul class="nav navbar-nav">                                      ';
   template += '          <li><a href="home.html">首页</a></li>                           ';
-  template += '          <li class="dropdown">                                          ';
-  template += '            <a class="dropdown-toggle" href="#" data-toggle="dropdown">  ';
-  template += '              应用                                                       ';
-  template += '              <b class="caret"></b>                                      ';
-  template += '            </a>                                                         ';
-  template += '            <ul class="dropdown-menu">                                   ';
-  template += '              <li><a href="#">倒数日</a></li>                            ';
-  template += '              <li><a href="#">爱时间</a></li>                            ';
-  template += '              <li><a href="#">爱记账</a></li>                            ';
-  template += '            </ul>                                                        ';
-  template += '          </li>                                                          ';
+  template += '          <li><a href="appList.html">应用</a></li>                        ';
   template += '        </ul>                                                            ';
   template += '        <ul class="nav navbar-nav navbar-right">                         ';
   template += '          <li><a href="#">关于我</a></li>                                ';

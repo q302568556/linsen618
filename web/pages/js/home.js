@@ -13,6 +13,7 @@ $(function() {
   loadNav($("#navContainer"), "home");
   //加载文章列表
   loadArticleList($("#articleListContainer"), "articleList_queryArticleList.action");
+  //加载日历
   $("#calendarContainer").datepicker(
     {format: "yyyy-mm-dd",
       weekStart: 1,

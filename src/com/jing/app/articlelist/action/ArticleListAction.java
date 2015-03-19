@@ -30,7 +30,7 @@ public class ArticleListAction extends ActionSupport {
   }
 
   //处理请求：获得文章列表
-	public String queryArticleList() throws Exception{
+	public String queryArticleList() throws Exception {
 		//调用业务逻辑组件
 	  articleList = articleListService.queryArticleList(selectedDate);
 		return SUCCESS;

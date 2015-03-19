@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+  <class name="com.jing.app.common.entity.App" table="APP" schema="LINSEN618">
+    <id name="appid">
+      <column name="APPID" not-null="true"/>
+    </id>
+    <property name="apptitle">
+      <column name="APPTITLE"/>
+    </property>
+    <property name="appsummary">
+      <column name="APPSUMMARY"/>
+    </property>
+    <property name="appimgname">
+      <column name="APPIMGNAME"/>
+    </property>
+  </class>
+</hibernate-mapping>

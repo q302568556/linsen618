@@ -73,10 +73,10 @@ public class ArticleAction extends ActionSupport {
   }
 
   //直接在struts.xml文件中配置的属性：文章图片正式保存路径，用于将文章图片从临时保存路径拷贝到正式保存路径
-  private String articleimgPath;
+  private String articleImgPath;
   //接收struts.xml文件配置值的方法：设置文章图片正式保存路径
-  public void setArticleimgPath(String articleimgPath) {
-    this.articleimgPath = articleimgPath;
+  public void setArticleImgPath(String articleImgPath) {
+    this.articleImgPath = articleImgPath;
   }
 
   /* --------------------------------图片上传相关属性 end------------------------------------- */
@@ -91,21 +91,21 @@ public class ArticleAction extends ActionSupport {
   //处理请求：新增文章
   public String addArticle() throws Exception {
     //调用业务逻辑组件
-    articleService.addArticle(article, filelink, articleimgPath);
+    articleService.addArticle(article, filelink, articleImgPath);
     return SUCCESS;
   }
 
   //处理请求：修改文章
   public String updateArticle() throws Exception {
     //调用业务逻辑组件
-    articleService.updateArticle(article, filelink, articleimgPath);
+    articleService.updateArticle(article, filelink, articleImgPath);
     return SUCCESS;
   }
 
   //处理请求：删除文章
   public String deleteArticle() throws Exception {
     //调用业务逻辑组件
-    articleService.deleteArticle(articleid, articleimgPath);
+    articleService.deleteArticle(articleid, articleImgPath);
     return SUCCESS;
   }
 

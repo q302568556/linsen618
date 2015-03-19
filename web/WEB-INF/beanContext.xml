@@ -18,4 +18,9 @@
   <bean id="loginService" class="com.jing.app.login.service.impl.LoginServiceImpl"/>
   <!-- 定义一个login DAO组件，自动装配 -->
   <bean id="loginDao" class="com.jing.app.login.dao.impl.LoginDaoImpl"/>
+
+  <!-- 定义一个appList业务逻辑组件，自动装配 -->
+  <bean id="appListService" class="com.jing.app.applist.service.impl.AppListServiceImpl"/>
+  <!-- 定义一个appList DAO组件，自动装配 -->
+  <bean id="appListDao" class="com.jing.app.applist.dao.impl.AppListDaoImpl"/>
 </beans>

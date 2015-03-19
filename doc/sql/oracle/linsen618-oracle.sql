@@ -40,6 +40,28 @@ alter table LOGINUSER
   add constraint PK_LOGINUSER primary key (LOGINUSERID)
   using index tablespace tbs_linsen618_index;
 
+create table APP
+(
+  appid      VARCHAR2(32) not null,
+  apptitle   VARCHAR2(20),
+  appsummary VARCHAR2(100),
+  appimgname VARCHAR2(20)
+)
+;
+comment on table APP
+  is '应用';
+comment on column APP.appid
+  is '应用ID';
+comment on column APP.apptitle
+  is '应用标题';
+comment on column APP.appsummary
+  is '应用简介';
+comment on column APP.appimgname
+  is '应用图片名称';
+alter table APP
+  add constraint PK_APP primary key (APPID)
+  using index tablespace tbs_linsen618_index;
+
 create or replace view vw_articlelist as
 select articleid,articletitle,substr(articlecontent,0,200) articlesummary,
 to_char(articledate,'yyyy-mm-dd') articledate from article;

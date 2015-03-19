@@ -27,8 +27,8 @@ function loadArticleList(articleListContainer, queryActileListAction, articleLis
           article.find(".articleList-article-title").text(articleData.articletitle);
           article.find(".articleList-article-summary").append(articleData.articlesummary);
           article.find(".articleList-article-date").text(articleData.articledate);
-          article.find(".articleList-article-summary").click(articleTitleSummaryClick);
-          article.find(".articleList-article-title").click(articleTitleSummaryClick);
+          article.find(".articleList-article-summary").click(articleTitleNSummaryClick);
+          article.find(".articleList-article-title").click(articleTitleNSummaryClick);
           articleListContainer.append(article);
         }
       }
@@ -37,9 +37,9 @@ function loadArticleList(articleListContainer, queryActileListAction, articleLis
 }
 
 /* ===============================================
- * 文章摘要点击事件
+ * 文章标题和摘要点击事件
  * ============================================= */
-function articleTitleSummaryClick() {
+function articleTitleNSummaryClick() {
   var articleid = $($(this).parents(".articleList-article")).find(".articleList-article-id").text();
   window.location.assign("article.html?" + articleid);
 }
@@ -52,22 +52,20 @@ function articleTemplate() {
   template += '<article class="articleList-article">                        ';
   template += '  <h3 class="articleList-article-id hidden"></h3>              ';
   template += '  <div class="row">                                          ';
-  template += '    <div class="col-sm-0 col-md-1 col-lg-1 pdr2 visible-md visible-lg">                 ';
+  template += '    <div class="col-sm-1 col-md-1 col-lg-1 pdr2 visible-sm visible-md visible-lg"> ';
   template += '      <h3>                                                   ';
   template += '        <a href="#" onclick="return false;">                 ';
   template += '          <span class="glyphicon glyphicon-bookmark"></span> ';
   template += '        </a>                                                 ';
   template += '      </h3>                                                  ';
   template += '    </div>                                                   ';
-  template += '    <div class="col-sm-12 col-md-11 col-lg-11 pdl2">              ';
+  template += '    <div class="col-sm-11 col-md-11 col-lg-11 pdl2">              ';
   template += '      <h3 class="articleList-article-title"></h3>     ';
   template += '      <small class="articleList-article-date"></small>           ';
   template += '    </div>                                                   ';
   template += '  </div>                                                     ';
   template += '  <div class="row">                                          ';
-  template += '    <div class="col-sm-0 col-md-1 col-lg-1 pdr2">                 ';
-  template += '    </div>                                                   ';
-  template += '    <div class="col-sm-12 col-md-11 col-lg-11 pdl2">              ';
+  template += '    <div class="col-sm-11 col-md-11 col-lg-11 pdl2 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 ">';
   template += '      <pre class="articleList-article-summary"></pre>           ';
   template += '    </div>                                                   ';
   template += '  </div>                                                     ';
