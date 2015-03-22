@@ -7,7 +7,7 @@ public class App {
   private String appid;
   private String apptitle;
   private String appsummary;
-  private String appimgname;
+  private String appimg;
 
   public String getAppid() {
     return appid;
@@ -33,12 +33,12 @@ public class App {
     this.appsummary = appsummary;
   }
 
-  public String getAppimgname() {
-    return appimgname;
+  public String getAppimg() {
+    return appimg;
   }
 
-  public void setAppimgname(String appimgname) {
-    this.appimgname = appimgname;
+  public void setAppimg(String appimg) {
+    this.appimg = appimg;
   }
 
   @Override
@@ -55,7 +55,7 @@ public class App {
     if(appid != null ? !appid.equals(app.appid) : app.appid != null) {
       return false;
     }
-    if(appimgname != null ? !appimgname.equals(app.appimgname) : app.appimgname != null) {
+    if(appimg != null ? !appimg.equals(app.appimg) : app.appimg != null) {
       return false;
     }
     if(appsummary != null ? !appsummary.equals(app.appsummary) : app.appsummary != null) {
@@ -73,7 +73,7 @@ public class App {
     int result = appid != null ? appid.hashCode() : 0;
     result = 31 * result + (apptitle != null ? apptitle.hashCode() : 0);
     result = 31 * result + (appsummary != null ? appsummary.hashCode() : 0);
-    result = 31 * result + (appimgname != null ? appimgname.hashCode() : 0);
+    result = 31 * result + (appimg != null ? appimg.hashCode() : 0);
     return result;
   }
 }

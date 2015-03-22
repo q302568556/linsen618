@@ -31,6 +31,7 @@
         <value>com/jing/app/common/entity/Vw_articlelist.hbm.xml</value>
         <value>com/jing/app/common/entity/Loginuser.hbm.xml</value>
         <value>com/jing/app/common/entity/App.hbm.xml</value>
+        <value>com/jing/app/common/entity/Applink.hbm.xml</value>
       </list>
 		</property>
 		<property name="hibernateProperties">

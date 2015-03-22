@@ -60,6 +60,7 @@
             method="{1}">
       <!-- 动态设置action的属性 -->
       <param name="appImgPath">/pages/img/appimg</param>
+      <param name="applinkImgPath">/pages/img/applinkimg</param>
     </action>
   </package>
 </struts>

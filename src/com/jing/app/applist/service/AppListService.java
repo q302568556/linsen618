@@ -1,6 +1,7 @@
 package com.jing.app.applist.service;
 
 import com.jing.app.common.entity.App;
+import com.jing.app.common.entity.Applink;
 
 import java.util.List;
 
@@ -10,4 +11,7 @@ import java.util.List;
 public interface AppListService {
   //查询应用列表
   public List<App> queryAppList();
+
+  //查询应用链接
+  public List<Applink> queryApplink(String appid);
 }

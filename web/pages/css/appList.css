@@ -1,0 +1,29 @@
+
+.pdl0 {
+  padding-left: 0px;
+}
+
+.fs18 {
+  font-size: 18px;
+}
+
+/* 文本响应式设置 begin */
+@media (max-width: 768px) {
+  .appList-app-title {
+    font-size: 22px;
+    margin-top: 5px;
+  }
+  .appList-app-summary {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .appList-app-title {
+    font-size: 26px;
+    margin-top: 5px;
+  }
+  .appList-app-summary {
+    font-size: 16px;
+  }
+}
+/* 文本响应式设置 end */

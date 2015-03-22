@@ -14,8 +14,8 @@
     <property name="appsummary">
       <column name="APPSUMMARY"/>
     </property>
-    <property name="appimgname">
-      <column name="APPIMGNAME"/>
+    <property name="appimg">
+      <column name="APPIMG"/>
     </property>
   </class>
 </hibernate-mapping>

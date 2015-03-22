@@ -44,8 +44,8 @@ create table APP
 (
   appid      VARCHAR2(32) not null,
   apptitle   VARCHAR2(20),
-  appsummary VARCHAR2(100),
-  appimgname VARCHAR2(20)
+  appsummary VARCHAR2(200),
+  appimg VARCHAR2(20)
 )
 ;
 comment on table APP
@@ -56,10 +56,35 @@ comment on column APP.apptitle
   is '应用标题';
 comment on column APP.appsummary
   is '应用简介';
-comment on column APP.appimgname
-  is '应用图片名称';
+comment on column APP.appimg
+  is '应用图片';
 alter table APP
   add constraint PK_APP primary key (APPID)
+  using index tablespace tbs_linsen618_index;
+
+create table APPLINK
+(
+  applinkid   VARCHAR2(32) not null,
+  appid       VARCHAR2(32),
+  applinkaddr VARCHAR2(50),
+  applinkimg  VARCHAR2(20),
+  applinkodr  VARCHAR2(1)
+)
+;
+comment on table APPLINK
+  is '应用链接(在不同应用市场的详情地址)';
+comment on column APPLINK.applinkid
+  is '应用链接id';
+comment on column APPLINK.appid
+  is '应用id';
+comment on column APPLINK.applinkaddr
+  is '应用链接地址';
+comment on column APPLINK.applinkimg
+  is '应用链接图片';
+comment on column APPLINK.applinkodr
+  is '应用链接顺序';
+alter table APPLINK
+  add constraint PK_APPLINK primary key (APPLINKID)
   using index tablespace tbs_linsen618_index;
 
 create or replace view vw_articlelist as

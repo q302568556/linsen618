@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+  <class name="com.jing.app.common.entity.Applink" table="APPLINK" schema="LINSEN618">
+    <id name="applinkid">
+      <column name="APPLINKID" not-null="true"/>
+    </id>
+    <property name="appid">
+      <column name="APPID"/>
+    </property>
+    <property name="applinkaddr">
+      <column name="APPLINKADDR"/>
+    </property>
+    <property name="applinkimg">
+      <column name="APPLINKIMG"/>
+    </property>
+    <property name="applinkodr">
+      <column name="APPLINKODR"/>
+    </property>
+  </class>
+</hibernate-mapping>

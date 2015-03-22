@@ -3,6 +3,7 @@ package com.jing.app.applist.service.impl;
 import com.jing.app.applist.dao.AppListDao;
 import com.jing.app.applist.service.AppListService;
 import com.jing.app.common.entity.App;
+import com.jing.app.common.entity.Applink;
 
 import java.util.List;
 
@@ -22,5 +23,12 @@ public class AppListServiceImpl implements AppListService {
     //调用Dao组件的方法来实现业务逻辑
     List<App> appList = appListDao.queryAppList();
     return appList;
+  }
+
+  //查询应用链接
+  public List<Applink> queryApplink(String appid) {
+    //调用Dao组件的方法来实现业务逻辑
+    List<Applink> applinkList = appListDao.queryApplink(appid);
+    return applinkList;
   }
 }
