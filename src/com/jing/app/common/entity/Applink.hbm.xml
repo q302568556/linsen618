@@ -20,5 +20,8 @@
     <property name="applinkodr">
       <column name="APPLINKODR"/>
     </property>
+    <property name="applinkname">
+      <column name="APPLINKNAME"/>
+    </property>
   </class>
 </hibernate-mapping>

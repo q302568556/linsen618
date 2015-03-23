@@ -20,6 +20,7 @@ $(function() {
  * 参数：(应用列表容器, 查询文章列表请求action)
  * ========================================================= */
 function loadAppList(appListContainer, queryAppListAction) {
+  //加载应用列表
   $.get(
     queryAppListAction,
     function(data) {
@@ -43,12 +44,19 @@ function loadAppList(appListContainer, queryAppListAction) {
           var applinkList = applinkMapData[appData.appid];
           for(var j in applinkList) {
             var applink = applinkList[j];
-            var applinkHtml = "<a href='" + applink.applinkaddr + "' target='_blank'>&nbsp;" +
-                              "<img src='" + applinkImgPathData + "/" + applink.applinkimg +
-                              "'" + " height='20px' width='20px'>&nbsp;</a>";
+            var applinkHtml = "<a data-toggle='tooltip' data-placement='top'" +
+                              " href='" + applink.applinkaddr + "'" +
+                              " title='" + applink.applinkname + "'" +
+                              " target='_blank'" +
+                              ">&nbsp;" +
+                              "<img class='appList-app-applink-img'" +
+                              " src='" + applinkImgPathData + "/" + applink.applinkimg + "'" +
+                              " height='20px' width='20px'>&nbsp;</a>";
             app.find(".appList-app-applink").append(applinkHtml);
           }
           appListContainer.append(app);
+          //启用工具提示功能
+          $("[data-toggle='tooltip']").tooltip();
         }
       }
     }
@@ -69,7 +77,7 @@ function appTemplate() {
   template += '      <h3 class="appList-app-title"></h3>                      ';
   template += '      <p class="appList-app-summary"></p>                      ';
   template += '      <div class="appList-app-applink pull-right">             ';
-  template += '        <span class="glyphicon glyphicon-hand-right fs18"></span>';
+  template += '        <span class="glyphicon glyphicon-hand-right fs16">&nbsp;</span>';
   template += '      </div>                                                   ';
   template += '    </div>                                                     ';
   template += '  </div>                                                       ';

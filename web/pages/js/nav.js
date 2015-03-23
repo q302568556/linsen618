@@ -26,6 +26,9 @@ function loadNav(navContainer, pageName) {
   if("appList" == pageName) { //应用列表
     findActiveTarget(navbarMain, "2");
   }
+  if("about" == pageName) { //关于我
+    findActiveTarget(navbarMain, "3");
+  }
   //判断是否登录，如果已登录，显示退出按钮
   var loginuserCookie = $.cookie("loginuserCookie");
   if(loginuserCookie) {
@@ -99,7 +102,7 @@ function navTemplate() {
   template += '          <span class="icon-bar"></span>                                 ';
   template += '          <span class="icon-bar"></span>                                 ';
   template += '        </button>                                                        ';
-  template += '        <a class="navbar-brand" href="home.html">林森的博客</a>                  ';
+  template += '        <a class="navbar-brand" href="home.html">林森的博客</a>            ';
   template += '      </div>                                                             ';
   template += '      <div class="collapse navbar-collapse" id="navbar-main">            ';
   template += '        <ul class="nav navbar-nav">                                      ';
@@ -107,7 +110,7 @@ function navTemplate() {
   template += '          <li><a href="appList.html">应用</a></li>                        ';
   template += '        </ul>                                                            ';
   template += '        <ul class="nav navbar-nav navbar-right">                         ';
-  template += '          <li><a href="#">关于我</a></li>                                ';
+  template += '          <li><a href="about.html">关于我</a></li>                        ';
   template += '        </ul>                                                            ';
   template += '      </div>                                                             ';
   template += '    </div>                                                               ';

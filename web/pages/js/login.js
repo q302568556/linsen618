@@ -11,6 +11,14 @@
 $(function() {
   //加载导航条
   loadNav($("#navContainer"), "login");
+  //回车键等效于登录按钮
+  $(window).keydown(
+    function(event) {
+      if(event.keyCode == 13) {
+        $("#login-signIn").click();
+      }
+    }
+  );
   //登录按钮点击事件
   $("#login-signIn").click(
     function() {

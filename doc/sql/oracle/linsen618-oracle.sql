@@ -68,7 +68,8 @@ create table APPLINK
   appid       VARCHAR2(32),
   applinkaddr VARCHAR2(50),
   applinkimg  VARCHAR2(20),
-  applinkodr  VARCHAR2(1)
+  applinkodr  VARCHAR2(1),
+  applinkname VARCHAR2(20)
 )
 ;
 comment on table APPLINK
@@ -83,6 +84,8 @@ comment on column APPLINK.applinkimg
   is '应用链接图片';
 comment on column APPLINK.applinkodr
   is '应用链接顺序';
+comment on column APPLINK.applinkname
+  is '应用链接名称';
 alter table APPLINK
   add constraint PK_APPLINK primary key (APPLINKID)
   using index tablespace tbs_linsen618_index;

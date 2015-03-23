@@ -59,13 +59,13 @@ function articleTemplate() {
   template += '        </a>                                                 ';
   template += '      </h3>                                                  ';
   template += '    </div>                                                   ';
-  template += '    <div class="col-sm-11 col-md-11 col-lg-11 pdl2">              ';
+  template += '    <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 pdl2">              ';
   template += '      <h3 class="articleList-article-title"></h3>     ';
   template += '      <small class="articleList-article-date"></small>           ';
   template += '    </div>                                                   ';
   template += '  </div>                                                     ';
   template += '  <div class="row">                                          ';
-  template += '    <div class="col-sm-11 col-md-11 col-lg-11 pdl2 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 ">';
+  template += '    <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 pdl2 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 ">';
   template += '      <pre class="articleList-article-summary"></pre>           ';
   template += '    </div>                                                   ';
   template += '  </div>                                                     ';

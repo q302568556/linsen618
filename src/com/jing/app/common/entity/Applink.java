@@ -9,6 +9,7 @@ public class Applink {
   private String applinkaddr;
   private String applinkimg;
   private String applinkodr;
+  private String applinkname;
 
   public String getApplinkid() {
     return applinkid;
@@ -84,5 +85,13 @@ public class Applink {
 
   public void setApplinkodr(String applinkodr) {
     this.applinkodr = applinkodr;
+  }
+
+  public String getApplinkname() {
+    return applinkname;
+  }
+
+  public void setApplinkname(String applinkname) {
+    this.applinkname = applinkname;
   }
 }

@@ -23,7 +23,7 @@ $(function() {
   $("#articleEditor-contentContainer").redactor({
     lang: "zh_cn",
     buttonSource: true, //显示源代码按钮
-    imageUpload: "article_saveArticleImage.action", //图片上传请求url
+    imageUpload: "article_saveArticleImg.action", //图片上传请求url
     imageManagerJson: "img/redactorchoose/images.json", //默认供选择的图片，imagemanager插件支持
     plugins: ["imagemanager"]
   });

@@ -6,6 +6,9 @@ import com.jing.app.common.entity.Article;
 import org.apache.struts2.ServletActionContext;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -138,6 +141,21 @@ public class ArticleServiceImpl implements ArticleService{
         articleImg.delete();
       }
     }
+  }
+
+  //保存文章图片
+  public void saveArticleImg(String filelink, File file) throws IOException {
+    //以文件保存路径和文件名建立上传文件输出流
+    String realPath = ServletActionContext.getServletContext().getRealPath(filelink);
+    FileOutputStream fileOutputStream = new FileOutputStream(realPath);
+    FileInputStream fileInputStream = new FileInputStream(file);
+    byte[] buffer = new byte[1024];
+    int len = 0;
+    while((len=fileInputStream.read(buffer))>0) {
+      fileOutputStream.write(buffer, 0, len);
+    }
+    fileOutputStream.close();
+    fileInputStream.close();
   }
 
 }

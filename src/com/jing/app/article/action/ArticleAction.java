@@ -3,11 +3,8 @@ package com.jing.app.article.action;
 import com.jing.app.article.service.ArticleService;
 import com.jing.app.common.entity.Article;
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.ServletActionContext;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.util.UUID;
 
 /**
@@ -110,24 +107,14 @@ public class ArticleAction extends ActionSupport {
   }
 
   //处理请求：保存文章图片
-  public String saveArticleImage() throws Exception {
-    //调用业务逻辑组件
+  public String saveArticleImg() throws Exception {
     //修改文件名
     String filePattern = fileFileName.substring(fileFileName.lastIndexOf("."));
     fileFileName = UUID.randomUUID().toString() + filePattern;
-    //文件路径加文件名
+    //文件路径加文件名，传递给前台
     filelink = filelink  + "/" + fileFileName;
-    //以文件保存路径和文件名建立上传文件输出流
-    String realPath = ServletActionContext.getServletContext().getRealPath(filelink);
-    FileOutputStream fileOutputStream = new FileOutputStream(realPath);
-    FileInputStream fileInputStream = new FileInputStream(file);
-    byte[] buffer = new byte[1024];
-    int len = 0;
-    while((len=fileInputStream.read(buffer))>0) {
-      fileOutputStream.write(buffer, 0, len);
-    }
-    fileOutputStream.close();
-    fileInputStream.close();
+    //调用业务逻辑组件
+    articleService.saveArticleImg(filelink, file);
     return SUCCESS;
   }
 }

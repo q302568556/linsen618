@@ -3,8 +3,8 @@
   padding-left: 0px;
 }
 
-.fs18 {
-  font-size: 18px;
+.fs16 {
+  font-size: 16px;
 }
 
 /* 文本响应式设置 begin */
@@ -27,3 +27,25 @@
   }
 }
 /* 文本响应式设置 end */
+
+/* 清除超链接样式 begin */
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+/* 清除超链接样式 end */
+
+/* 定义应用链接图片样式 begin */
+.appList-app-applink-img:hover {
+  opacity: 0.8;
+  box-shadow: 2px 2px 1px #808080;
+}
+/* 定义应用链接图片样式 end */
